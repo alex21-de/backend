@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Enterprise.Domain\Enterprise.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Blog\DTOs\" />
+    <Folder Include="Features\Blog\" />
+    <Folder Include="Features\Users\" />
+  </ItemGroup>
+
 </Project>
