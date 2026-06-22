@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Enterprise.Infrastructure.Configurations
 {
-    public class BlogConfiguration : IEntityTypeConfiguration<BlogEntity>
+    public class BlogConfiguration : IEntityTypeConfiguration<Blog>
     {
-        public void Configure(EntityTypeBuilder<BlogEntity> builder)
+        public void Configure(EntityTypeBuilder<Blog> builder)
         {
             builder.HasKey(x => x.Id);
 

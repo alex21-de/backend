@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Enterprise.Domain.Entities
 {
-    public class BlogEntity
+    public class Blog
     {
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Text { get; set; } = string.Empty;
         public Guid UserId { get; set; }
-        public UserEntity User { get; set; } = null!;
+        public User User { get; set; } = null!;
     }
 }

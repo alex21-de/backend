@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Enterprise.Application.Interfaces;
+using Enterprise.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,8 @@ namespace Enterprise.Infrastructure
                     configuration.GetConnectionString("DefaultConnection")
                 )
             );
+
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }

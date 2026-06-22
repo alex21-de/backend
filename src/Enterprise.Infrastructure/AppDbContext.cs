@@ -11,8 +11,8 @@ namespace Enterprise.Infrastructure
 {
     public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {
-        public DbSet<UserEntity> Users => Set<UserEntity>();
-        public DbSet<BlogEntity> Blog => Set<BlogEntity>();
+        public DbSet<User> Users => Set<User>();
+        public DbSet<Blog> Blog => Set<Blog>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
