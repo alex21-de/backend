@@ -13,11 +13,13 @@ namespace Enterprise.Infrastructure
     {
         public DbSet<User> Users => Set<User>();
         public DbSet<Blog> Blog => Set<Blog>();
+        public DbSet<Product> Products => Set<Product>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new BlogConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
